@@ -1,0 +1,11 @@
+{{ define "main" }}
+  {{ if not hugo.IsProduction }}{{ "<!-- home.html: start -->" | safeHTML }}{{ end }}
+
+  {{/*
+    home.html, and page.html should behave the same currently, therefore we put
+    the code into a partial.
+  */}}
+  {{ partial "pageContent.html" . }}
+
+  {{ if not hugo.IsProduction }}{{ "<!-- home.html: end -->" | safeHTML }}{{ end }}
+{{ end }}

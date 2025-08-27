@@ -1,0 +1,107 @@
+### Hugo configuration
+
+# This file contains the most basic configuration values. Up until Hugo v0.110.0
+# it was known as config.yaml.
+#
+# Resources / further reading:
+# - Hugo configuration reference (built-in variables and defaults):
+#   https://gohugo.io/getting-started/configuration/#all-configuration-settings
+
+---
+
+# Absolute URL (protocol, host, path, and trailing slash) of the published site
+baseURL: "https://example.com/"
+
+
+# Theme(s) or theme components to use for this site.
+#
+# Resources / further reading:
+# - https://gohugo.io/hugo-modules/theme-components/
+#
+# Notes:
+# - A project can configure a theme as a composite of as many theme components
+#   with a precedence from top to bottom when looking fir a resource.
+# - When using Hugo module path here, you do NOT need a matching entry under
+#   module.imports. Hugo is importing a theme shipped as module automatically.
+# - For non-module installs, themes can  be the name of a folder under /themes.
+theme:
+  - "golang.foundata.com/hugo-theme-dev" # Hugo module path
+
+
+# Site title. Please note that propably gets overwritten by languages.yaml
+title: "Hugo development theme"
+
+
+# Default timezone. Might get overwritten in languages.yaml (even though a language
+# does not define a location in every case, it often makes sense)
+timeZone: "Etc/UTC"
+
+
+# Enable generation of robots.txt file.
+enableRobotsTXT: true
+
+
+# Default language
+defaultContentLanguage: "en"
+defaultContentLanguageInSubdir: false
+
+
+# Languages
+#
+# Use this file for static, user-defined values. For translatable strings, see
+# the i18n/ subfolder.
+#
+# Resources / further reading:
+# - Hugo configuration reference (built-in variables and defaults):
+#   https://gohugo.io/getting-started/configuration/#all-configuration-settings
+# - https://www.regisphilibert.com/blog/2018/08/hugo-multilingual-part-1-managing-content-translation/
+disableLanguages:
+  []
+languages:
+  en:
+    languageCode: "en"
+    languageName: "English"
+    languageDirection: "ltr"
+    weight: 1
+    timeZone: "Etc/UTC"
+  # uncomment (or define in your theme) for the additional language "German"
+  de:
+    languageCode: "de"
+    languageName: "Deutsch"
+    languageDirection: "ltr"
+    weight: 2
+    title: "Hugo-Entwicklungs-Theme"
+    timeZone: "Europe/Berlin"
+    pagination:
+      path: "seite" # Hugo's default is "page"
+
+
+params:
+  # Theme-specific features and parameters.
+  # All have sensible defaults, so you don't need to define them unless you
+  # want to override the behavior globally or per page (via front matter).
+  feature:
+    # Show a navigation list of all regular pages
+    pagesNav: true   # default: true
+    # Show a navigation list of all available translations (if any)
+    langNav: true    # default: true
+    # Show a debug dump of important variables (e.g. .Page context) in the footer
+    debug: false     # default: false
+
+
+# Hugo's internal webserver
+server:
+  headers:
+  - for: "/**"
+    values:
+      # Attention: the following settings are UNSAFE regarding CORS for PRODUCTION
+      #            and were defined under the assumption, that "hugo server" is
+      #            ONLY used FOR DEVELOPMENT.
+      Access-Control-Allow-Origin: "*"
+      Access-Control-Allow-Methods: "POST, GET, OPTIONS, DELETE, PUT"
+      Access-Control-Allow-Headers: "Accept, Accept-Language, Content-Language, Content-Type, Origin, Authorization, X-Requested-With, Client-Security-Token"
+      Referrer-Policy: strict-origin-when-cross-origin
+      #Content-Security-Policy: script-src localhost:1313
+      #X-Content-Type-Options: nosniff
+      #X-Frame-Options: DENY
+      #X-XSS-Protection: 1; mode=block

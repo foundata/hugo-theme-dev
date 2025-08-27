@@ -1,0 +1,13 @@
+# Language strings and translation: English
+
+---
+
+baseof:
+  - id: "languageSelection"
+    translation: "Language selection:"
+  - id: "currentLanguageBold"
+    translation: "(Current language is bold)"
+  - id: "listOfAllRegularPages"
+    translation: "List of all regular pages:"
+  - id: "debugDumpOf"
+    translation: "Debug dump of `{{ .Name }}` ({{ .Desc }}):"

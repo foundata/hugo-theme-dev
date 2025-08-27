@@ -1,0 +1,11 @@
+{{ define "main" }}
+  {{ if not hugo.IsProduction }}{{ "<!-- taxonomy.html: start -->" | safeHTML }}{{ end }}
+
+  {{/*
+    section.html, taxonomy.html, and term.html should behave the same currently,
+    therefore we put the code into a partial.
+  */}}
+  {{ partial "list.html" . }}
+
+  {{ if not hugo.IsProduction }}{{ "<!-- taxonomy.html: end -->" | safeHTML }}{{ end }}
+{{ end }}

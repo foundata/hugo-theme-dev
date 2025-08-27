@@ -1,6 +1,6 @@
 version = 1
-SPDX-PackageName = "hugo-theme-dev (Hugo theme for example sites / component development and testing)"
-SPDX-PackageDownloadLocation = "https://github.com/foundata/hugo-theme-testing"
+SPDX-PackageName = "hugo-theme-dev (Hugo theme for exampleSite content, component development, and testing)"
+SPDX-PackageDownloadLocation = "https://github.com/foundata/hugo-theme-dev"
 SPDX-PackageSupplier = "foundata GmbH (https://foundata.com)"
 SPDX-PackageComment = """
 This project may include calls to Application Programming Interfaces

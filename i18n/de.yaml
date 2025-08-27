@@ -1,0 +1,13 @@
+# Language strings and translation: German
+
+---
+
+baseof:
+  - id: "languageSelection"
+    translation: "Sprachauswahl:"
+  - id: "currentLanguageBold"
+    translation: "(aktuelle Sprache hervorgehoben)"
+  - id: "listOfAllRegularPages"
+    translation: "Auflistung aller regulärer Seiten:"
+  - id: "debugDumpOf"
+    translation: "Debug-Ausgabe von `{{ .Name }}` ({{ .Desc }}):"

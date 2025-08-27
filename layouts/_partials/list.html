@@ -1,0 +1,17 @@
+{{ if not hugo.IsProduction }}{{ "<!-- _partials/list.html: start -->" | safeHTML }}{{ end }}
+  <h1>
+    {{ (.Title | .Page.RenderString  | emojify) }}
+  </h1>
+
+  {{ (.Content | emojify)  }}
+
+  <p>
+    <nav>
+      <ul>
+      {{ range .Pages }}
+        <li><a href="{{ .RelPermalink }}">{{ .LinkTitle | .Page.RenderString  | emojify }}</a></li>
+      {{ end }}
+      </ul>
+    </nav>
+  </p>
+{{ if not hugo.IsProduction }}{{ "<!-- _partials/list.html: end -->" | safeHTML }}{{ end }}

@@ -1,0 +1,7 @@
+  {{ if not hugo.IsProduction }}{{ "<!-- _partials/pageContent.html: start -->" | safeHTML }}{{ end }}
+  <h1>
+    {{ (.Title | .Page.RenderString  | emojify) }}
+  </h1>
+
+  {{ (.Content | emojify) }}
+  {{ if not hugo.IsProduction }}{{ "<!-- _partials/pageContent.html: end -->" | safeHTML }}{{ end }}
