@@ -1,0 +1,18 @@
+# See the following for more information about the format:
+# https://github.com/gohugoio/hugoThemesSiteBuilder/blob/main/README.md#theme-configuration
+
+name = "dev"
+description = "A Hugo theme for exampleSite content, component development, and testing. It is not a production-ready theme, but rather a sandbox for experimenting. It intentionally provides no styling."
+homepage = "https://github.com/foundata/hugo-theme-dev"
+#demosite = ""
+
+license = "GPL-3.0-or-later"
+licenselink = "https://github.com/foundata/hugo-theme-dev/blob/main/LICENSES/GPL-3.0-or-later.txt"
+authors = [
+  {name = "foundata GmbH", homepage = "https://foundata.com"},
+  {name = "Andreas Haerter", homepage = "https://andreashaerter.com"}
+]
+
+tags = ["dev", "development", "demo", "exampleSite"]
+features = ["minimalist", "debugging"]
+min_version = "0.148.0"
