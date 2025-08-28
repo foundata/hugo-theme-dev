@@ -1,7 +1,5 @@
 # Hugo theme: dev
 
-⚠️ **Experimental - Not ready for production use yet.**
-
 A Hugo theme for `exampleSite` content, component development, and testing. It is not a production-ready theme, but rather a sandbox for experimenting. It intentionally provides no styling.
 
 Feel free to use it to explore, debug, and contribute new components!
