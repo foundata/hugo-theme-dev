@@ -1,4 +1,4 @@
-# Hugo template: `hugo-theme-dev`
+# Hugo theme: dev
 
 ⚠️ **Experimental - Not ready for production use yet.**
 
@@ -18,15 +18,14 @@ Feel free to use it to explore, debug, and contribute new components!
 
 ## Installation and usage<a id="installation"></a>
 
-The theme is intended to be added as Hugo module in your `exampleSite` and sandbox projects:
+The theme is intended to be added as Hugo module in your `exampleSite` and sandbox projects. Simply add the following to your [`theme:` configuration](https://gohugo.io/hugo-modules/theme-components/):
 
 ```yaml
 theme:
   - "golang.foundata.com/hugo-theme-dev"
 ```
-That's it. This path refers to a Go/Hugo module. Hugo automatically fetches and imports the theme as a module, so you do **not** need to add it to your `module.imports` manually.
 
-But keep in mind that Hugo modules [require Hugo, Go and Git](https://gohugo.io/hugo-modules/use-modules/#prerequisite) to be installed on your system.
+Hugo automatically fetches and import theme module paths as Go/Hugo modules, so you do **not** need to list them under `module.imports` manually. Using modules requires [Hugo, Go, and Git](https://gohugo.io/hugo-modules/use-modules/#prerequisite) to be installed on your system.
 
 
 ## Configuration<a id="configuration"></a>
