@@ -2,33 +2,38 @@
 
 ⚠️ **Experimental - Not ready for production use yet.**
 
-A lightweight Hugo theme designed for `exampleSite` content, component development, and testing.
+A Hugo theme for `exampleSite` content, component development, and testing. It is not a production-ready theme, but rather a sandbox for experimenting. It intentionally provides no styling.
+
+Feel free to use it to explore, debug, and contribute new components!
 
 
 # Table of contents
 
-- [Usage](#usage)
-  - [In projects / `exampleSite`](#usage-module)
-  - [Try it directly](#usage-directly)
+- [Installation and usage](#installation)
+- [Configuration](#configuration)
+- [Demo](#demo)
 - [Licensing, copyright](#licensing-copyright)
 - [Author information](#author-information)
 
 
-## Usage<a id="usage"></a>
+## Installation and usage<a id="installation"></a>
 
-### As module in projects / `exampleSite`<a id="usage-module"></a>
-
-Add the module path to your [`theme:` configuration](https://gohugo.io/hugo-modules/theme-components/):
+The theme is intended to be added as Hugo module in your `exampleSite` and sandbox projects:
 
 ```yaml
 theme:
   - "golang.foundata.com/hugo-theme-dev"
 ```
+That's it. This path refers to a Go/Hugo module. Hugo automatically fetches and imports the theme as a module, so you do **not** need to add it to your `module.imports` manually.
 
-This path refers to a Go / Hugo module. Hugo automatically fetches and imports the theme as a module, so you do **not** need to add it to your `module.imports` manually.
-You can then add any additional configuration your `exampleSite` requires.
+But keep in mind that Hugo modules [require Hugo, Go and Git](https://gohugo.io/hugo-modules/use-modules/#prerequisite) to be installed on your system.
 
-The theme provides demo content in **English** and **German**, along with a built-in language switcher. If you don't want to provide German content in your examples, you can simply disable the language and/or the language navigation in your site configuration:
+
+## Configuration<a id="configuration"></a>
+
+No additional configuration is required by default.
+
+But the theme provides demo content in **English** and **German**, along with a built-in language switcher. If you don’t want to include German demo content in your examples, you can disable the language and/or the language navigation in your site configuration:
 
 ```yaml
 disableLanguages:
@@ -42,10 +47,30 @@ params:
     langNav: false # default: true
 ```
 
+There is also a built-in debugging feature, which dumps `.Page`, `.Params` and `.Site.Params` in the footer:
 
-### Try it directly<a id="usage-directly"></a>
+```yaml
+params:
+  feature:
+    debug: true # default: false
+```
 
-Clone the repository and run the included example content:
+Every feature can also be controlled per page via front matter:
+
+```yaml
+---
+title: "Demo homepage"
+feature:
+  pagesNav: false
+  langNav: false
+  debug: false
+---
+```
+
+
+### Demo<a id="demo"></a>
+
+Clone the repository and run the included example content (requires Hugo, Go, and Git):
 
 ```bash
 git clone https://github.com/foundata/hugo-theme-dev.git
